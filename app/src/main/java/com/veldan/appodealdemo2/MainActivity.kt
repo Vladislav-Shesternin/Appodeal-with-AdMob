@@ -17,16 +17,22 @@ class MainActivity : AppCompatActivity() {
         Appodeal.initialize(
             this,
             getString(R.string.appodeal_id),
-            Appodeal.BANNER
+            Appodeal.BANNER or Appodeal.INTERSTITIAL
         )
 
-        binding.btnShowBannerBottom.setOnClickListener {
-            Appodeal.show(this, Appodeal.BANNER_VIEW)
-        }
+        binding.apply {
 
-        binding.btnHideBannerBottom.setOnClickListener {
-            Appodeal.hide(this, Appodeal.BANNER_VIEW)
-        }
+            btnShowBannerBottom.setOnClickListener {
+                Appodeal.show(this@MainActivity, Appodeal.BANNER_VIEW)
+            }
+            btnHideBannerBottom.setOnClickListener {
+                Appodeal.hide(this@MainActivity, Appodeal.BANNER_VIEW)
+            }
 
+            btnShowInterstitial.setOnClickListener {
+                Appodeal.show(this@MainActivity, Appodeal.INTERSTITIAL)
+            }
+
+        }
     }
 }
