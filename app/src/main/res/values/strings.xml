@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppodealDemo2</string>
+
+    <!--IDs-->
+    <string name="admob_id" formatted="false" translatable="false">ca-app-pub-6757786625316217~9422707994</string>
+    <string name="appodeal_id" formatted="false" translatable="false">6ecb63216c4a0e77c2579286cb25855999713fb629e795a6</string>
+</resources>
